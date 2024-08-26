@@ -104,9 +104,6 @@ const projects = [
         name: "Python",
       },
       {
-        name: "Numpy"
-      },
-      {
         name: "Pandas"
       },
       {
