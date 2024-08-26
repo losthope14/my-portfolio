@@ -19,60 +19,126 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    project: "project 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
+    category: "fullstack",
+    project: "Merdeka Belajar",
+    description: "This project was completed as part of a Systems Information course assignment. It uses CodeIgniter and MySQL to implement a Google Single Sign-On (SSO) feature for user authentication. Additionally, it includes a system where users can enroll in the first three courses for free, with subsequent enrollments requiring the completion of assignments from prior courses.",
     stack: [
       {
-        name: "Html 5",
+        name: "PHP",
       },
       {
-        name: "Css 3"
+        name: "CodeIgniter"
       },
       {
-        name: "Javascript"
+        name: "MySQL"
       }
     ],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: ""
+    image: "/assets/work/online-edu.png",
+    live: "#",
+    github: "https://github.com/losthope14/Website-Online-Education"
   },
   {
     num: "02",
     category: "fullstack",
-    project: "project 2",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
+    project: "Easy RE",
+    description: "This project was undertaken to complete the Web Programming 2 course assignment. It utilizes CodeIgniter and MySQL to handle basic CRUD (Create, Read, Update, Delete) operations for real estate data, providing a robust platform for managing property information",
     stack: [
       {
-        name: "Next.js",
+        name: "PHP",
       },
       {
-        name: "Tailwind.css"
+        name: "CodeIgniter"
       },
       {
-        name: "Node.js"
+        name: "MySQL"
       }
     ],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: ""
+    image: "/assets/work/real-estate.png",
+    live: "#",
+    github: "https://github.com/losthope14/Website-Manajemen-Real-Estate"
   },
   {
     num: "03",
     category: "frontend",
-    project: "project 3",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
+    project: "Omdb Public API",
+    description: "This project was completed as a course assignment and involves using PHP and JavaScript. It features a simple user interface designed to search for movie data by film title keywords, allowing users to easily find and view information about movies",
     stack: [
       {
-        name: "Next.js",
+        name: "PHP",
       },
       {
-        name: "Tailwind.css"
+        name: "JavaScript"
+      },
+      {
+        name: "MySQL"
       },
     ],
-    image: "/assets/work/thumb3.png",
-    live: "",
-    github: ""
+    image: "/assets/work/public-api.png",
+    live: "#",
+    github: "https://github.com/losthope14/Omdb-Public-API-Simple-UI"
+  },
+  {
+    num: "04",
+    category: "frontend",
+    project: "Simple Rest API",
+    description: "This simple API was developed as a final project for the Belajar Membuat Aplikasi Back-End untuk Pemula course offered by Dicoding. The API utilizes JavaScript and Node.js to build an efficient server-side environment.",
+    stack: [
+      {
+        name: "JavaScript",
+      },
+      {
+        name: "Node.js"
+      },
+    ],
+    image: "/assets/work/rest-api.png",
+    live: "#",
+    github: "https://github.com/losthope14/Submission-Back-End-Pemula-Dicoding.git"
+  },
+  {
+    num: "05",
+    category: "frontend",
+    project: "Analytic Dashboard",
+    description: "This project was completed as a submission for a course at Dicoding. It utilizes Python and libraries such as Numpy, Pandas, Matplotlib, Seaborn, and Streamlit to analyze e-commerce data. The project involves processing sales data and creating a dashboard to visualize key metrics such as sales and revenue",
+    stack: [
+      {
+        name: "Python",
+      },
+      {
+        name: "Numpy"
+      },
+      {
+        name: "Pandas"
+      },
+      {
+        name: "Streamlit"
+      },
+    ],
+    image: "/assets/work/data-analytics.png",
+    live: "#",
+    github: "https://github.com/losthope14/Simple-Data-Analytics-Dashboard"
+  },
+  {
+    num: "06",
+    category: "fullstack",
+    project: "Iot Monitoring Sim",
+    description: "This project was completed as part of a course assignment and integrates several technologies to provide a comprehensive solution for data monitoring. The application utilizes PHP, JavaScript, MQTT protocol, and Node.js to build a dynamic and responsive platform.",
+    stack: [
+      {
+        name: "PHP",
+      },
+      {
+        name: "JavaScript"
+      },
+      {
+        name: "MQTT"
+      },
+      {
+        name: "C++"
+      },
+    ],
+    image: "/assets/work/iot-monitoring-sim.png",
+    live: "#",
+    github: "https://github.com/losthope14/Proyek-Monitoring-IoT-Sederhana"
   },
 ]
 
@@ -98,10 +164,10 @@ const Work = () => {
                   { project.num }
                 </div>
                 <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                  { project.category } project
+                  { project.project }
                 </h2>
                 <p className="text-white/60">
-                  { project.description }
+                  { project.description.length > 90 ? `${project.description.slice(0, 90)}...` : project.description}
                 </p>
                 <ul className="flex gap-4">
                   {project.stack.map((item, index) => {
