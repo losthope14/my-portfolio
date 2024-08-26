@@ -143,46 +143,86 @@ const education = {
   ],
 }
 
-const skills = {
-  title: "My Skills",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
-  skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html 5"
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3"
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript"
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js"
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js"
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css"
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js"
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma"
-    }
-  ]
-}
+const skills = [
+  {
+    title: "Favorite Stack",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
+    skillList: [
+      {
+        icon: <FaHtml5 />,
+        name: "html 5"
+      },
+      {
+        icon: <FaCss3 />,
+        name: "css 3"
+      },
+      {
+        icon: <FaJs />,
+        name: "javascript"
+      },
+      {
+        icon: <FaReact />,
+        name: "react.js"
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "next.js"
+      },
+      {
+        icon: <SiTailwindcss />,
+        name: "tailwind.css"
+      },
+      {
+        icon: <FaNodeJs />,
+        name: "node.js"
+      },
+      {
+        icon: <FaFigma />,
+        name: "figma"
+      }
+    ]
+  },
+  {
+    title: "Interest Stack",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
+    skillList: [
+      {
+        icon: <FaHtml5 />,
+        name: "html 5"
+      },
+      {
+        icon: <FaCss3 />,
+        name: "css 3"
+      },
+      {
+        icon: <FaJs />,
+        name: "javascript"
+      },
+      {
+        icon: <FaReact />,
+        name: "react.js"
+      },
+      {
+        icon: <SiNextdotjs />,
+        name: "next.js"
+      },
+      {
+        icon: <SiTailwindcss />,
+        name: "tailwind.css"
+      },
+      {
+        icon: <FaNodeJs />,
+        name: "node.js"
+      },
+      {
+        icon: <FaFigma />,
+        name: "figma"
+      }
+    ]
+  }
+]
 
-const Resume = () => {
+const Stack = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -190,9 +230,41 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn"},
        }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-12"
     >
       <div className="container mx-auto">
+        <div className="w-full h-full flex flex-col gap-20">
+          {skills.map((item, index_st) => {
+            return (
+              <div key={index_st} className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-[30px] text-center xl:text-center">
+                    <h3 className="text-4xl font-bold">{ item.title }</h3>
+                    {/* <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{ skills.description }</p> */}
+                </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {item.skillList.map((skill, index_nd) => {
+                      return (
+                        <li key={index_nd}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-6xl group-hover:text-accent transition-all  duration-300">{ skill.icon }</div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{ skill.name }</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      )
+                    })}
+                </ul>
+              </div>
+            )
+          })}    
+        </div> 
+
+        {/*
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
@@ -305,9 +377,11 @@ const Resume = () => {
             </TabsContent>
           </div>
         </Tabs>
+        */}
+
       </div>
     </motion.div>
   );
 }
 
-export default Resume
+export default Stack

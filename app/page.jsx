@@ -20,7 +20,7 @@ const Home = () => {
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>Download CV</span>
+                <span>look at my cv</span>
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
@@ -31,13 +31,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none mt-4 mb-8 xl:mt-0 xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
 
-      <Stats />
+      {/* <Stats /> */}
     </section>
   )
 }
