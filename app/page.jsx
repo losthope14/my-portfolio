@@ -1,8 +1,10 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
+import TypingAnimate from "@/components/TypingAnimate";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -10,7 +12,9 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Machine Learning Enthusiast</span>
+            <span className="text-xl">
+              <TypingAnimate />
+            </span>
             <h1 className="h1 mb-6">
               Hello I'm <br /><span className="text-accent">Basthian Arisna</span>
             </h1>
@@ -20,7 +24,7 @@ const Home = () => {
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span>look at my cv</span>
+                <Link href="https://docs.google.com/document/d/1Dhx1Swo67dUSmJ5yBz8H8R9Y_6JfVPjWG0G4ro2ToOw/edit?usp=sharing">look at my cv</Link>
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
@@ -31,7 +35,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mt-4 mb-8 xl:mt-0 xl:mb-0">
+          <div className="order-1 xl:order-none mt-4 mb-10 xl:mt-0 xl:mb-0">
             <Photo />
           </div>
         </div>

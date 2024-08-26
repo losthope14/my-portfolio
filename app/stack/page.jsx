@@ -7,9 +7,20 @@ import {
   FaReact, 
   FaFigma,  
   FaNodeJs,
+  FaGitAlt,
+  FaPython,
+  FaDocker,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs} from "react-icons/si";
+import { 
+  SiTensorflow, 
+  SiJupyter, 
+  SiGooglecolab, 
+  SiLaravel,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiShadcnui,
+} from "react-icons/si";
 
 import {
   Tabs,
@@ -146,40 +157,56 @@ const education = {
 const skills = [
   {
     title: "Favorite Stack",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
+    description: "My favorite stacks...",
     skillList: [
       {
         icon: <FaHtml5 />,
-        name: "html 5"
+        name: "html"
       },
       {
         icon: <FaCss3 />,
-        name: "css 3"
+        name: "css"
       },
       {
         icon: <FaJs />,
         name: "javascript"
       },
       {
-        icon: <FaReact />,
-        name: "react.js"
-      },
-      {
-        icon: <SiNextdotjs />,
-        name: "next.js"
+        icon: <FaNodeJs />,
+        name: "node.js"
       },
       {
         icon: <SiTailwindcss />,
         name: "tailwind.css"
       },
       {
-        icon: <FaNodeJs />,
-        name: "node.js"
+        icon: <SiLaravel />,
+        name: "laravel"
       },
       {
         icon: <FaFigma />,
         name: "figma"
-      }
+      },
+      {
+        icon: <FaGitAlt />,
+        name: "git"
+      },
+      {
+        icon: <FaPython />,
+        name: "python"
+      },
+      {
+        icon: <SiTensorflow />,
+        name: "tensorflow"
+      },
+      {
+        icon: <SiJupyter />,
+        name: "jupyter notebook"
+      },
+      {
+        icon: <SiGooglecolab />,
+        name: "google colab"
+      },
     ]
   },
   {
@@ -187,18 +214,6 @@ const skills = [
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident natus exercitationem distinctio amet.",
     skillList: [
       {
-        icon: <FaHtml5 />,
-        name: "html 5"
-      },
-      {
-        icon: <FaCss3 />,
-        name: "css 3"
-      },
-      {
-        icon: <FaJs />,
-        name: "javascript"
-      },
-      {
         icon: <FaReact />,
         name: "react.js"
       },
@@ -207,17 +222,13 @@ const skills = [
         name: "next.js"
       },
       {
-        icon: <SiTailwindcss />,
-        name: "tailwind.css"
+        icon: <FaDocker />,
+        name: "docker"
       },
       {
-        icon: <FaNodeJs />,
-        name: "node.js"
+        icon: <SiShadcnui />,
+        name: "shadcn ui"
       },
-      {
-        icon: <FaFigma />,
-        name: "figma"
-      }
     ]
   }
 ]
