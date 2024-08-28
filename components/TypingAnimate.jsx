@@ -14,7 +14,7 @@ const TypingAnimate = () => {
             1000,
             'Cyber Security Enthusiast',
             1000,
-            'Continous Learning Enthusiast',
+            'Continuous Learning Enthusiast',
             1000
         ]}
         wrapper="span"
