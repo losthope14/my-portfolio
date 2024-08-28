@@ -24,7 +24,7 @@ const Home = () => {
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <Link href="https://docs.google.com/document/d/1Dhx1Swo67dUSmJ5yBz8H8R9Y_6JfVPjWG0G4ro2ToOw/edit?usp=sharing">look at my cv</Link>
+                <Link href="https://docs.google.com/document/d/1lNyyx7H3cLnmXRETWvOMNGt2WzhioZQRA4h2YZt9v_k/edit?usp=sharing">look at my cv</Link>
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
